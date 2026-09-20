@@ -44,6 +44,9 @@ const elements = {
   nextButtonLabel: document.querySelector("#nextButtonLabel"),
   clearButton: document.querySelector("#clearButton"),
   restartButton: document.querySelector("#restartButton"),
+  feedbackButton: document.querySelector("#feedbackButton"),
+  feedbackDialog: document.querySelector("#feedbackDialog"),
+  feedbackCloseButton: document.querySelector("#feedbackCloseButton"),
   toast: document.querySelector("#toast"),
 };
 
@@ -217,6 +220,11 @@ elements.previousButton.addEventListener("click", previousQuestion);
 elements.nextButton.addEventListener("click", nextQuestion);
 elements.clearButton.addEventListener("click", () => resetAssessment());
 elements.restartButton.addEventListener("click", () => resetAssessment("新的答案，也许会照见新的状态"));
+elements.feedbackButton.addEventListener("click", () => elements.feedbackDialog.showModal());
+elements.feedbackCloseButton.addEventListener("click", () => elements.feedbackDialog.close());
+elements.feedbackDialog.addEventListener("click", (event) => {
+  if (event.target === elements.feedbackDialog) elements.feedbackDialog.close();
+});
 
 document.addEventListener("keydown", (event) => {
   if (elements.quizView.hidden) return;

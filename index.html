@@ -125,8 +125,21 @@
       <footer class="site-footer">
         <span>清醒一点，也温柔一点。</span>
         <span>结果仅供自我梳理，不替你做职业决定。</span>
+        <span>本页面由瑞秋制作，是一款职场幸福感测评工具，数据仅保存在本地。</span>
+        <button class="feedback-button" id="feedbackButton" type="button">反馈建议</button>
       </footer>
     </main>
+
+    <dialog class="feedback-dialog" id="feedbackDialog" aria-labelledby="feedbackTitle">
+      <div class="feedback-dialog-content">
+        <div class="feedback-dialog-heading">
+          <span class="feedback-mark" aria-hidden="true">✦</span>
+          <h2 id="feedbackTitle">反馈建议</h2>
+        </div>
+        <p>如有想法或发现问题，欢迎在小红书搜索“瑞秋在职场”留言反馈，你的反馈会让这个工具变得更好。</p>
+        <button class="button button-primary feedback-close" id="feedbackCloseButton" type="button">知道了</button>
+      </div>
+    </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script type="module" src="./app.js"></script>

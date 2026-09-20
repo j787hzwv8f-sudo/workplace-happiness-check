@@ -1,0 +1,2 @@
+# workplace-happiness-check
+no
